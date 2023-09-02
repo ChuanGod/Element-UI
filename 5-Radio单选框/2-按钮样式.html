@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- import Vue before Element -->
+  <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+  <!-- import JavaScript -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+
+
+</head>
+
+<body>
+  <!-- 
+  只需要把el-radio元素换成el-radio-button元素即可，此外，Element 还提供了size属性。
+ -->
+  <div id="app">
+    <template>
+      <div>
+        <el-radio-group v-model="radio1">
+          <el-radio-button label="上海"></el-radio-button>
+          <el-radio-button label="北京"></el-radio-button>
+          <el-radio-button label="广州"></el-radio-button>
+          <el-radio-button label="深圳"></el-radio-button>
+        </el-radio-group>
+      </div>
+      <div style="margin-top: 20px">
+        <el-radio-group v-model="radio2" size="medium">
+          <el-radio-button label="上海"></el-radio-button>
+          <el-radio-button label="北京"></el-radio-button>
+          <el-radio-button label="广州"></el-radio-button>
+          <el-radio-button label="深圳"></el-radio-button>
+        </el-radio-group>
+      </div>
+      <div style="margin-top: 20px">
+        <el-radio-group v-model="radio3" size="small">
+          <el-radio-button label="上海"></el-radio-button>
+          <el-radio-button label="北京" disabled></el-radio-button>
+          <el-radio-button label="广州"></el-radio-button>
+          <el-radio-button label="深圳"></el-radio-button>
+        </el-radio-group>
+      </div>
+      <div style="margin-top: 20px">
+        <el-radio-group v-model="radio4" disabled size="mini">
+          <el-radio-button label="上海"></el-radio-button>
+          <el-radio-button label="北京"></el-radio-button>
+          <el-radio-button label="广州"></el-radio-button>
+          <el-radio-button label="深圳"></el-radio-button>
+        </el-radio-group>
+      </div>
+    </template>
+  </div>
+
+</body>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: function () {
+      return {
+        radio1: '上海',
+        radio2: '上海',
+        radio3: '上海',
+        radio4: '上海'
+      }
+    }
+  })
+</script>
+
+</html>
