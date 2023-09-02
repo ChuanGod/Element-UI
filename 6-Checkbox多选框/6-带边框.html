@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- import Vue before Element -->
+  <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+  <!-- import JavaScript -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+
+</head>
+
+<body>
+  <!-- 
+  设置border属性可以渲染为带有边框的多选框。
+    
+   -->
+  <div id="app">
+    <template>
+      <div>
+        <el-checkbox v-model="checked1" label="备选项1" border></el-checkbox>
+        <el-checkbox v-model="checked2" label="备选项2" border></el-checkbox>
+      </div>
+      <div style="margin-top: 20px">
+        <el-checkbox v-model="checked3" label="备选项1" border size="medium"></el-checkbox>
+        <el-checkbox v-model="checked4" label="备选项2" border size="medium"></el-checkbox>
+      </div>
+      <div style="margin-top: 20px">
+        <el-checkbox-group v-model="checkboxGroup1" size="small">
+          <el-checkbox label="备选项1" border></el-checkbox>
+          <el-checkbox label="备选项2" border disabled></el-checkbox>
+        </el-checkbox-group>
+      </div>
+      <div style="margin-top: 20px">
+        <el-checkbox-group v-model="checkboxGroup2" size="mini" disabled>
+          <el-checkbox label="备选项1" border></el-checkbox>
+          <el-checkbox label="备选项2" border></el-checkbox>
+        </el-checkbox-group>
+      </div>
+    </template>
+  </div>
+
+</body>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: function () {
+      return {
+        checked1: true,
+        checked2: false,
+        checked3: false,
+        checked4: true,
+        checkboxGroup1: [],
+        checkboxGroup2: []
+      }
+    }
+  })
+</script>
+
+</html>

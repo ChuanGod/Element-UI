@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- import Vue before Element -->
+  <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+  <!-- import JavaScript -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+
+</head>
+
+<body>
+  <!-- 
+
+    在el-checkbox元素中定义v-model绑定变量，单一的checkbox中，默认绑定变量的值会是Boolean，选中为true。
+
+    disabled  禁用
+
+   -->
+  <div id="app">
+    <template>
+      <!-- `checked` 为 true 或 false -->
+      <el-checkbox v-model="checked1" disabled>备选项1</el-checkbox>
+      <el-checkbox v-model="checked2">备选项</el-checkbox>
+    </template>
+  </div>
+
+</body>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: function () {
+      return {
+        checked1: false,
+        checked2: true
+      }
+    }
+  })
+</script>
+
+</html>
