@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- import Vue before Element -->
+  <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+  <!-- import JavaScript -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+
+</head>
+
+<body>
+  <!-- 
+    disabled属性接受一个Boolean，设置为true即可禁用整个组件，
+    如果你只需要控制数值在某一范围内，可以设置min属性和max属性，
+    不设置min和max时，最小值为 0。
+    
+   -->
+  <div id="app">
+    <template>
+      <el-input-number v-model="num" :disabled="true"></el-input-number>
+    </template>
+  </div>
+
+</body>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: function () {
+      return {
+        num: 1
+      }
+    }
+  })
+</script>
+
+</html>

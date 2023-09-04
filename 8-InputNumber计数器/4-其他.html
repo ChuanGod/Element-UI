@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- import Vue before Element -->
+  <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+  <!-- import JavaScript -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+
+</head>
+
+<body>
+  <!-- 
+    设置 precision 属性可以控制数值精度，接收一个 Number。
+
+    Tips : precision 的值必须是一个非负整数，并且不能小于 step 的小数位数。
+
+    设置 controls-position 属性可以控制按钮位置。
+    
+   -->
+  <div id="app">
+    <template>
+      <el-input-number v-model="num" :precision="2" :step="0.1" :max="10"></el-input-number>
+    </template>
+
+
+    <!-- 尺寸 -->
+    <template>
+      <el-input-number v-model="num1"></el-input-number>
+      <el-input-number size="medium" v-model="num2"></el-input-number>
+      <el-input-number size="small" v-model="num3"></el-input-number>
+      <el-input-number size="mini" v-model="num4"></el-input-number>
+    </template>
+
+    <template>
+      <el-input-number v-model="num" controls-position="right" @change="handleChange" :min="1" :max="10"></el-input-number>
+    </template>
+  </div>
+
+</body>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: function () {
+      return {
+        num: 1,
+        num1: 1,
+        num2: 1,
+        num3: 1,
+        num4: 1
+      }
+    },
+    methods: {
+      handleChange(value) {
+        console.log(value);
+      }
+    }
+  })
+</script>
+
+</html>
