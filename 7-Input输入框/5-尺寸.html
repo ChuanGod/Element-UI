@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- import Vue before Element -->
+  <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+  <!-- import JavaScript -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+
+</head>
+
+<body>
+  <!-- 
+    可通过 size 属性指定输入框的尺寸，除了默认的大小外，
+    还提供了 medium、small 和 mini 三种尺寸。
+    
+   -->
+  <div id="app">
+    <div class="demo-input-size">
+      <el-input placeholder="请输入内容" suffix-icon="el-icon-date" v-model="input1">
+      </el-input>
+      <el-input size="medium" placeholder="请输入内容" suffix-icon="el-icon-date" v-model="input2">
+      </el-input>
+      <el-input size="small" placeholder="请输入内容" suffix-icon="el-icon-date" v-model="input3">
+      </el-input>
+      <el-input size="mini" placeholder="请输入内容" suffix-icon="el-icon-date" v-model="input4">
+      </el-input>
+    </div>
+  </div>
+
+</body>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: function () {
+      return {
+        input1: '',
+        input2: '',
+        input3: '',
+        input4: ''
+      }
+    }
+  })
+</script>
+
+</html>
