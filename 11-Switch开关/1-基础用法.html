@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- import Vue before Element -->
+  <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+  <!-- import JavaScript -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+
+</head>
+
+<body>
+  <!-- 
+    绑定v-model到一个Boolean类型的变量。
+    可以使用active-color属性与inactive-color属性来设置开关的背景色。
+
+    使用active-text属性与inactive-text属性来设置开关的文字描述。
+
+    设置active-value和inactive-value属性，接受Boolean, String或Number类型的值。
+
+    设置disabled属性，接受一个Boolean，设置true即可禁用。
+    
+   -->
+  <div id="app">
+    <el-switch v-model="value" active-color="#13ce66" inactive-color="#ff4949">
+    </el-switch>
+
+    <el-switch v-model="value1" active-text="按月付费" inactive-text="按年付费">
+    </el-switch>
+    <el-switch style="display: block" v-model="value2" active-color="#13ce66" inactive-color="#ff4949"
+      active-text="按月付费" inactive-text="按年付费">
+    </el-switch>
+
+    <el-tooltip :content="'Switch value: ' + value2" placement="top">
+      <el-switch v-model="value2" active-color="#13ce66" inactive-color="#ff4949" active-value="100" inactive-value="0">
+      </el-switch>
+    </el-tooltip>
+
+    <el-switch v-model="value1" disabled>
+    </el-switch>
+    <el-switch v-model="value2" disabled>
+    </el-switch>
+  </div>
+
+</body>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: function () {
+      return {
+        value: true,
+        value1: true,
+        value2: true,
+        value2: '100'
+      }
+    }
+  })
+</script>
+
+</html>
