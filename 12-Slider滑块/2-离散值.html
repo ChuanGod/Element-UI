@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- import Vue before Element -->
+  <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+  <!-- import JavaScript -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+
+</head>
+
+<body>
+  <!-- 
+    选项可以是离散的
+
+    改变step的值可以改变步长，通过设置show-stops属性可以显示间断点
+    
+   -->
+  <div id="app">
+    <template>
+      <div class="block">
+        <span class="demonstration">不显示间断点</span>
+        <el-slider v-model="value1" :step="10">
+        </el-slider>
+      </div>
+      <div class="block">
+        <span class="demonstration">显示间断点</span>
+        <el-slider v-model="value2" :step="10" show-stops>
+        </el-slider>
+      </div>
+    </template>
+  </div>
+
+</body>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: function () {
+      return {
+        value1: 0,
+        value2: 0
+      }
+    }
+  })
+</script>
+
+</html>
